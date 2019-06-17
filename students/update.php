@@ -8,7 +8,7 @@
 	
 	$student = new Student($db);
 	
-	if($_SERVER["REQUEST_METHOD"]=="POST"){
+	if( $_SERVER["REQUEST_METHOD"] == "POST"){
 		
 		$student->id = htmlspecialchars(intval($_POST['id']));
 		$student->name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : $student->generate('name');

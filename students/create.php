@@ -9,7 +9,7 @@
 	
 	$student = new Student($db);        //Passing database connection to constructor....
 	
-	if($__SERVER["REQUEST_METHOD"]== "POST"){
+	if($_SERVER["REQUEST_METHOD"]== "POST"){
 		
 		$student->name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : die("Name attribute can't be empty");
 		$student->email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : die("Email attribute can't be empty");
